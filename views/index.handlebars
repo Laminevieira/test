@@ -1,0 +1,34 @@
+{{!--
+<h1>Cats!</h1>
+
+<h2>Cats that are not sleepy!</h2>
+
+<ul>
+    {{#each cats}} {{#unless sleepy}} {{> cats/cat-block sleep=true}} {{/unless}} {{/each}}
+</ul>
+
+<h2>Cats that are sleepy!</h2>
+
+<ul>
+    {{#each cats}} {{#if sleepy}} {{> cats/cat-block sleep=false}} {{/if}} {{/each}}
+</ul> --}}
+
+<div class="row">
+    <center>
+        <!-- Left side (ready to eat) -->
+        <div class="col-md-12">
+            <h4 class="primary_font">Restaurants</h4>
+            <div id="added">
+
+                {{#each Restaurants}}
+                <form action="restaurant/add/{{id}}" method="POST">
+                    <div class="input-group">
+                        <li class="form-control">{{id}}. {{restaurant_name}}</li>
+                        </span>
+                    </div>
+                </form>
+                {{/each}}
+            </div>
+        </div>
+    </center>
+</div>
